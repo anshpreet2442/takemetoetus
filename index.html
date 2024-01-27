@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="icon" type="image/x-icon" href="https://encycode.com/wp-content/uploads/2020/10/Etus_logo-420x420.png">
+
+
+    <title>Dynamic Keyword Redirect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+<meta name="description" content="Take me to etus world . Page by Anshpreet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FFA500"> <!-- Set the theme color to orange (#FFA500) -->
+   <link rel="icon" type="image/x-icon" href="https://pixeldrain.com/api/file/4MvtNcR9/thumbnail">
+
+  <style>
+    ::selection {
+      background-color: #8d608c;
+      color: #fff; /* text color in the selected area */
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function redirect() {
+            var keyword = document.getElementById('keyword').value;
+            if (keyword) {
+                window.location.href = 'https://etus.link/' + keyword;
+            } else {
+                alert('Please enter a valid keyword.');
+            }
+        }
+
+        function generateTextField() {
+            var container = document.getElementById('textFields');
+            var textField = document.createElement('input');
+            textField.type = 'text';
+            textField.placeholder = 'Enter keyword';
+            textField.classList.add('neumorphism');
+            textField.classList.add('typewriter');
+            container.appendChild(textField);
+
+            var copyButton = document.createElement('button');
+            copyButton.textContent = 'Copy';
+            copyButton.onclick = function() {
+                var url = 'https://bit.ly/' + textField.value;
+                copyToClipboard(url);
+            };
+            container.appendChild(copyButton);
+        }
+
+        function copyToClipboard(text) {
+            var tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('URL copied to clipboard: ' + text);
+        }
+    </script>
+</head>
+<body>
+    <h1>Dynamic Keyword Redirect</h1>
+    <p>Enter a keyword to be redirected:</p>
+    <input type="text" id="keyword" placeholder="Enter keyword" class="neumorphism typewriter">
+    <button onclick="redirect()">Go</button>
+
+    <div id="textFields">
+        <button onclick="generateTextField()">Generate Text Field</button>
+    </div>
+</body>
+</html>
+
+
+
+
+
+<style>
+
+
+
+
+
+  body {
+      font-family: 'Special Elite', cursive;
+  }
+
+  .typewriter {
+      font-family: 'Special Elite', cursive;
+  }
+
+  .neumorphism {
+      border: 1px solid #d9d9d9;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 2px 2px 5px #a0a0a0, -2px -2px 5px #ffffff;
+      transition: transform 0.2s, box-shadow 0.2s;
+      background: #f0f0f0;
+      width: 50%;
+      margin: 10px;
+  }
+
+  .neumorphism:focus {
+      transform: scale(0.98);
+      box-shadow: 4px 4px 10px #a0a0a0, -4px -4px 10px #ffffff;
+  }
+
+  button {
+      border: 1px solid #d9d9d9;
+      border-radius: 10px;
+      padding: 10px;
+      background: #f0f0f0;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin: 10px;
+  }
+
+  button:hover {
+      transform: scale(0.98);
+      box-shadow: 4px 4px 10px #a0a0a0, -4px -4px 10px #ffffff;
+  }
+
+
+
+
+
+
+
+  
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
